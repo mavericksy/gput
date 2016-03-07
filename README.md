@@ -50,7 +50,7 @@ func main() {
 | `gput.Rmso()` | Disable standout mode |
 | `gput.Sgr0()` | Turn off all attributes |
 
-#### Cursor Movement
+#### Cursor Manipulation
 
 | **Function** | **Description** |
 |:---|:---|
@@ -63,6 +63,14 @@ func main() {
 | `gput.Cuu1()` | Up one line |
 | `gput.Sc()` | Save the cursor position |
 | `gput.Rc()` | Restore the cursor position |
+| `gput.Civis()` | Hide the cursor |
+| `gput.Cnorm()` | Show the cursor |
+
+#### Return Information
+
+| **Function** | **Description** |
+|:---|:---|
+| `gput.Clear()` | 
 
 #### Return Information
 
