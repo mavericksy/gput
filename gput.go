@@ -1,12 +1,13 @@
 package gput
 
 import (
-  "log"
   "strconv"
+  "log"
+  "strings"
   "github.com/codeskyblue/go-sh"
 )
 
-func Setab(color int) () {
+func Setab(color int) {
   sh.Command("tput", "setab", strconv.Itoa(color)).Run()
 }
 
@@ -28,8 +29,16 @@ func Bold() {
   sh.Command("tput", "bold").Run()
 }
 
+func Dim() {
+  sh.Command("tput", "dim").Run()
+}
+
 func Smul() {
   sh.Command("tput", "smul").Run()
+}
+
+func Rmul() {
+  sh.Command("tput", "rmul").Run()
 }
 
 func Rev() {
@@ -62,30 +71,6 @@ func Cup(x int, y int) {
   sh.Command("tput", "cup", strconv.Itoa(y), strconv.Itoa(x)).Run()
 }
 
-func Sc() {
-  sh.Command("tput", "sc").Run()
-}
-
-func Rc() {
-  sh.Command("tput", "rc").Run()
-}
-
-func Lines()(string) {
-  lines, err := sh.Command("tput", "lines").Output()
-  if err != nil {
-    log.Fatal(err)
-  }
-  return string(lines)
-}
-
-func Cols()(string) {
-  cols, err := sh.Command("tput", "cols").Output()
-  if err != nil {
-    log.Fatal(err)
-  }
-  return string(cols)
-}
-
 func Cub(dist int) {
   sh.Command("tput", "cub", strconv.Itoa(dist)).Run()
 }
@@ -110,7 +95,51 @@ func Cuu1() {
   sh.Command("tput", "cuu1").Run()
 }
 
+func Sc() {
+  sh.Command("tput", "sc").Run()
+}
 
+func Rc() {
+  sh.Command("tput", "rc").Run()
+}
+
+func Civis() {
+  sh.Command("tput", "civis").Run()
+}
+
+func Cnorm() {
+  sh.Command("tput", "cnorm").Run()
+}
+
+
+
+
+func Lines()(int) {
+  output, err := sh.Command("tput", "lines").Output()
+  lines, err := strconv.Atoi(strings.TrimSpace(string(output)))
+  if err != nil {
+    log.Fatal(err)
+  }
+  return lines;
+}
+
+func Cols()(int) {
+  output, err := sh.Command("tput", "cols").Output()
+  cols, err := strconv.Atoi(strings.TrimSpace(string(output)))
+  if err != nil {
+    log.Fatal(err)
+  }
+  return cols;
+}
+
+func Colors()(int) {
+  output, err := sh.Command("tput", "colors").Output()
+  colors, err := strconv.Atoi(strings.TrimSpace(string(output)))
+  if err != nil {
+    log.Fatal(err)
+  }
+  return colors;
+}
 
 func Ech(chars int) {
   sh.Command("tput", "ech", strconv.Itoa(chars)).Run()
@@ -138,4 +167,8 @@ func Ich(chars int) {
 
 func Il(lines int) {
   sh.Command("tput", "il", strconv.Itoa(lines)).Run()
+}
+
+func Dl(lines int) {
+  sh.Command("tput", "dl", strconv.Itoa(lines)).Run()
 }

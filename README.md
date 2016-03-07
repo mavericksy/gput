@@ -21,7 +21,7 @@ import (
 func main() {
   gput.Cup(6, 6)
   gput.Setab(128)
-  
+
   fmt.Printf("%v Gput Colors Available", gput.Colors());
 }
 ```
@@ -71,6 +71,10 @@ func main() {
 | `gput.Lines()(int lines)` | Output the number of lines of the terminal |
 | `gput.Cols()(int cols)` | Output the number of columns of the terminal |
 | `gput.Colors()(int colors)` | Output the number of colors supported in the terminal |
+
+#### ToDo
+
+Implement the remaining commands from this [page](https://www.gnu.org/software/termutils/manual/termutils-2.0/html_chapter/tput_1.html).
 
 #### License
 
