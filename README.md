@@ -11,7 +11,19 @@ $ go get github.com/maxmclau/qgput
 #### Usage
 
 ```Go
-...
+package main
+
+import (
+  "fmt"
+  "github.com/maxmclau/gput"
+)
+
+func main() {
+  gput.Cup(6, 6)
+  gput.Setab(128)
+  
+  fmt.Printf("%v Gput Colors Available", gput.Colors());
+}
 ```
 
 #### Set Colors
