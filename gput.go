@@ -141,12 +141,14 @@ func Colors()(int) {
   return colors;
 }
 
-func Ech(chars int) {
-  sh.Command("tput", "ech", strconv.Itoa(chars)).Run()
-}
+
 
 func Clear() {
   sh.Command("tput", "clear").Run()
+}
+
+func Ech(chars int) {
+  sh.Command("tput", "ech", strconv.Itoa(chars)).Run()
 }
 
 func El1() {

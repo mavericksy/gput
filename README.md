@@ -66,11 +66,12 @@ func main() {
 | `gput.Civis()` | Hide the cursor |
 | `gput.Cnorm()` | Show the cursor |
 
-#### Return Information
+#### Terminal Deletion
 
 | **Function** | **Description** |
 |:---|:---|
-| `gput.Clear()` | 
+| `gput.Clear()` | 	Clear the entire screen and home the cursor |
+| `gput.Ech(chars int)` | 	Erase #1 characters |
 
 #### Return Information
 
