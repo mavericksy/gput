@@ -1,6 +1,6 @@
 # Gput
 
-Golang port of the tput linux command
+Golang port of the tput unix command
 
 #### Install
 
