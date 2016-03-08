@@ -26,6 +26,32 @@ func main() {
 }
 ```
 
+#### Print Colors
+
+```Go
+// Prints all available ANSI colors to terminal
+
+package main
+
+import (
+  "fmt"
+  "github.com/maxmclau/gput"
+)
+
+func main() {
+  gput.Clear()
+  fmt.Printf("%v Available ANSI Colors: ", gput.Colors())
+  gput.Cud1()
+  
+  for i := 0; i < gput.Colors(); i++ {
+		gput.Setab(i)
+    fmt.Printf(" %v ", i)
+    gput.Sgr0()
+	}
+  gput.Cud1()
+}
+```
+
 #### Set Colors
 
 | **Function** | **Description** |
