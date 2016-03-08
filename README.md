@@ -57,8 +57,8 @@ func main() {
 | `gput.Cup(int x, int y)` | Move cursor to screen location `x`,`y` (top left is 0,0) |
 | `gput.Cub(int chars)` | Move `chars` characters left |
 | `gput.Cuf(int chars)` | Move `chars` characters right |
-| `gput.Cuu(int chars)` | Move `chars` characters up |
-| `gput.Cud(int chars)` | Move `chars` characters down |
+| `gput.Cuu(int lines)` | Move `lines` lines up |
+| `gput.Cud(int lines)` | Move `lines` lines down |
 | `gput.Cub1()` | Move left one space |
 | `gput.Cuf1()` | Move right one space (non-destructive space) |
 | `gput.Cuu1()` | Move up one line |
