@@ -79,7 +79,15 @@ func Cuf(dist int) {
   sh.Command("tput", "cuf", strconv.Itoa(dist)).Run()
 }
 
-func Cub1() {
+func Cuu(dist int) {
+  sh.Command("tput", "cuu", strconv.Itoa(dist)).Run()
+}
+
+func Cud(dist int) {
+  sh.Command("tput", "cud", strconv.Itoa(dist)).Run()
+}
+
+func Cub1(dist int) {
   sh.Command("tput", "cub1").Run()
 }
 
@@ -87,24 +95,16 @@ func Cuf1() {
   sh.Command("tput", "cuf1").Run()
 }
 
-func Ll() {
-  sh.Command("tput", "ll").Run()
-}
-
-func Cuu() {
-  sh.Command("tput", "cuu").Run()
-}
-
 func Cuu1() {
   sh.Command("tput", "cuu1").Run()
 }
 
-func Cud() {
-  sh.Command("tput", "cud").Run()
-}
-
 func Cud1() {
   sh.Command("tput", "cud1").Run()
+}
+
+func Ll() {
+  sh.Command("tput", "ll").Run()
 }
 
 func Sc() {
