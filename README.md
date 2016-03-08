@@ -5,7 +5,7 @@ Golang port of the tput unix command
 #### Install
 
 ```Shell
-$ go get github.com/maxmclau/qgput
+$ go get github.com/maxmclau/gput
 ```
 
 #### Usage
