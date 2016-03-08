@@ -91,8 +91,20 @@ func Ll() {
   sh.Command("tput", "ll").Run()
 }
 
+func Cuu() {
+  sh.Command("tput", "cuu").Run()
+}
+
 func Cuu1() {
   sh.Command("tput", "cuu1").Run()
+}
+
+func Cud() {
+  sh.Command("tput", "cud").Run()
+}
+
+func Cud1() {
+  sh.Command("tput", "cud1").Run()
 }
 
 func Sc() {
