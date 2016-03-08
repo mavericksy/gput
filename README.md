@@ -86,6 +86,7 @@ func main() {
 
  - Implement the remaining commands from this [page](https://www.gnu.org/software/termutils/manual/termutils-2.0/html_chapter/tput_1.html).
  - Comment functions in code
+ - Remove reliance on go-sh package
  - Generate documentation from GoDoc
 
 #### License
